@@ -25,7 +25,7 @@ This project was developed as part of the Innovative Assignment submission.
 - Member 1 Raudra Shiv — Enrollment No: 2401031800093
 - Member 2 Shubham Agarwal — Enrollment No: 2401031800090
 - Member 3 Vipin Rajbhar — Enrollment No: 2401031800100
----
+----
 
 ### 🎨 Design & Documentation Team
 **Role:** UI/UX Designer + Documentation
