@@ -22,17 +22,16 @@ This project was developed as part of the Innovative Assignment submission.
 ### 💻 Frontend Development Team
 **Role:** Frontend Developer (HTML, CSS, JavaScript)
 
-- Member 1 Shubham — Enrollment No: ______________________
-- Member 2 _______________ — Enrollment No: ______________________
-- Member 3 _______________ — Enrollment No: ______________________
-
+- Member 1 Raudra Shiv — Enrollment No: 2401031800093
+- Member 2 Shubham Agarwal — Enrollment No: 2401031800090
+- Member 3 Vipin Rajbhar — Enrollment No: 2401031800100
 ---
 
 ### 🎨 Design & Documentation Team
 **Role:** UI/UX Designer + Documentation
 
-- Member 4 _______________ — Enrollment No: ______________________
-- Member 5 _______________ — Enrollment No: ______________________
+- Member 4 Maharshi Patel — Enrollment No: 2401031800098
+- Member 5 Ashkar Parekh — Enrollment No: 2401031800094
 
 
 ## 🎯 Project Objectives
