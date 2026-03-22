@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Submit Recipe — CookTogether</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span>🍳</span> CookTogether</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="recipes.html">Recipes</a>
+      <a href="submit.html" class="active">Submit Recipe</a>
+      <a href="login.html" class="btn-nav">Login</a>
+    </div>
+    <button class="hamburger" id="hamburger">☰</button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="recipes.html">Recipes</a>
+    <a href="submit.html">Submit Recipe</a>
+    <a href="login.html">Login</a>
+  </div>
+</nav>
+
+<div class="submit-page">
+  <div class="submit-inner">
+    <h2>📝 Submit Your Recipe</h2>
+    <p class="subtitle">Share your culinary creation with the CookTogether community.</p>
+
+    <form onsubmit="handleSubmit(event)">
+
+      <!-- Basic Info -->
+      <div class="submit-card">
+        <h3>🍽️ Basic Information</h3>
+        <div class="form-group">
+          <label>Recipe Title *</label>
+          <input type="text" placeholder="e.g. Creamy Garlic Pasta" required />
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Category *</label>
+            <select required>
+              <option value="">Select category</option>
+              <option>Breakfast</option>
+              <option>Lunch</option>
+              <option>Dinner</option>
+              <option>Desserts</option>
+              <option>Drinks</option>
+              <option>Vegan</option>
+              <option>Baking</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Difficulty *</label>
+            <select required>
+              <option value="">Select difficulty</option>
+              <option>Easy</option>
+              <option>Medium</option>
+              <option>Hard</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Prep Time (minutes)</label>
+            <input type="number" placeholder="e.g. 15" min="1" />
+          </div>
+          <div class="form-group">
+            <label>Cook Time (minutes)</label>
+            <input type="number" placeholder="e.g. 30" min="1" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Servings</label>
+            <input type="number" placeholder="e.g. 4" min="1" />
+          </div>
+          <div class="form-group">
+            <label>Calories (per serving)</label>
+            <input type="number" placeholder="e.g. 350" min="0" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Short Description</label>
+          <textarea placeholder="Briefly describe your recipe in 1–2 sentences…" style="min-height:80px;"></textarea>
+        </div>
+      </div>
+
+      <!-- Photo Upload -->
+      <div class="submit-card">
+        <h3>📷 Recipe Photo</h3>
+        <div class="upload-area" onclick="document.getElementById('fileInput').click()">
+          <div class="upload-icon">🖼️</div>
+          <p><span>Click to upload</span> or drag and drop</p>
+          <p style="margin-top:4px;font-size:0.78rem;">PNG, JPG up to 10MB</p>
+          <input type="file" id="fileInput" accept="image/*" style="display:none;" onchange="previewImage(event)" />
+        </div>
+        <img id="preview" style="display:none;margin-top:16px;border-radius:var(--radius);max-height:240px;width:100%;object-fit:cover;" />
+      </div>
+
+      <!-- Ingredients -->
+      <div class="submit-card">
+        <h3>🛒 Ingredients</h3>
+        <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:16px;">List each ingredient on a new line (e.g. "2 cups flour")</p>
+        <div class="form-group">
+          <textarea id="ingredientsField" placeholder="2 cups all-purpose flour&#10;1 tsp baking powder&#10;1/2 cup butter, softened&#10;…" style="min-height:160px;" required></textarea>
+        </div>
+      </div>
+
+      <!-- Instructions -->
+      <div class="submit-card">
+        <h3>📋 Step-by-Step Instructions</h3>
+        <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:16px;">Write each step on a new line. They will be numbered automatically.</p>
+        <div class="form-group">
+          <textarea id="stepsField" placeholder="Preheat oven to 180°C.&#10;Mix dry ingredients in a bowl.&#10;Add butter and mix until crumbly.&#10;…" style="min-height:200px;" required></textarea>
+        </div>
+      </div>
+
+      <!-- Tags -->
+      <div class="submit-card">
+        <h3>🏷️ Tags</h3>
+        <div class="form-group">
+          <input type="text" placeholder="e.g. vegetarian, quick, healthy, gluten-free (comma separated)" />
+        </div>
+      </div>
+
+      <!-- Submit -->
+      <div style="display:flex;gap:12px;justify-content:flex-end;margin-top:8px;">
+        <button type="button" class="btn btn-outline">Save Draft</button>
+        <button type="submit" class="btn btn-primary">🚀 Publish Recipe</button>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-bottom" style="border-top:none;padding-top:0;">
+      <span>© 2026 CookTogether.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="nav.js"></script>
+<script>
+  function previewImage(e) {
+    const file = e.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = ev => {
+      const img = document.getElementById('preview');
+      img.src = ev.target.result;
+      img.style.display = 'block';
+    };
+    reader.readAsDataURL(file);
+  }
+  function handleSubmit(e) {
+    e.preventDefault();
+    alert('🎉 Recipe submitted successfully! It will be reviewed and published shortly.');
+  }
+</script>
+</body>
+</html>

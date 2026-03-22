@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saved Recipes — CookTogether</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span>🍳</span> CookTogether</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="recipes.html">Recipes</a>
+      <a href="submit.html">Submit Recipe</a>
+      <a href="profile.html" class="btn-nav">My Profile</a>
+    </div>
+    <button class="hamburger" id="hamburger">☰</button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="recipes.html">Recipes</a>
+    <a href="submit.html">Submit Recipe</a>
+    <a href="profile.html">My Profile</a>
+  </div>
+</nav>
+
+<section class="section">
+  <div class="section-inner">
+    <div style="margin-bottom:28px;">
+      <h1 style="font-size:1.9rem;font-weight:800;margin-bottom:6px;">❤️ Saved Recipes</h1>
+      <p class="text-muted">Your personal collection of favorite recipes.</p>
+    </div>
+
+    <!-- Sort / Filter -->
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:24px;align-items:center;">
+      <div class="filter-chips">
+        <span class="chip active">All (18)</span>
+        <span class="chip">🍳 Breakfast</span>
+        <span class="chip">🍝 Dinner</span>
+        <span class="chip">🍰 Desserts</span>
+      </div>
+      <div class="filter-group" style="margin-left:auto;">
+        <label>Sort</label>
+        <select>
+          <option>Recently Saved</option>
+          <option>Highest Rated</option>
+          <option>Quickest</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="cards-grid">
+
+      <a href="recipe-detail.html" class="recipe-card">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&q=80" alt="Pizza" />
+          <span class="card-badge">Dinner</span>
+          <button class="card-save">❤️</button>
+        </div>
+        <div class="card-body">
+          <h3>Homemade Margherita Pizza</h3>
+          <div class="card-meta"><span>⏱ 45 min</span><span>👤 Medium</span></div>
+          <div class="card-footer">
+            <div class="rating"><span class="stars">★★★★★</span> 4.8</div>
+            <span class="author">by Luca R.</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="recipe-detail.html" class="recipe-card">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=400&q=80" alt="Cake" />
+          <span class="card-badge">Dessert</span>
+          <button class="card-save">❤️</button>
+        </div>
+        <div class="card-body">
+          <h3>Chocolate Lava Cake</h3>
+          <div class="card-meta"><span>⏱ 30 min</span><span>👤 Medium</span></div>
+          <div class="card-footer">
+            <div class="rating"><span class="stars">★★★★★</span> 5.0</div>
+            <span class="author">by Emma L.</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="recipe-detail.html" class="recipe-card">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=400&q=80" alt="Pancakes" />
+          <span class="card-badge">Breakfast</span>
+          <button class="card-save">❤️</button>
+        </div>
+        <div class="card-body">
+          <h3>Fluffy Buttermilk Pancakes</h3>
+          <div class="card-meta"><span>⏱ 20 min</span><span>👤 Easy</span></div>
+          <div class="card-footer">
+            <div class="rating"><span class="stars">★★★★☆</span> 4.7</div>
+            <span class="author">by Sophie T.</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="recipe-detail.html" class="recipe-card">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=400&q=80" alt="Pasta" />
+          <span class="card-badge">Dinner</span>
+          <button class="card-save">❤️</button>
+        </div>
+        <div class="card-body">
+          <h3>Creamy Garlic Pasta</h3>
+          <div class="card-meta"><span>⏱ 25 min</span><span>👤 Easy</span></div>
+          <div class="card-footer">
+            <div class="rating"><span class="stars">★★★★★</span> 4.8</div>
+            <span class="author">by James W.</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- Empty state (hidden by default) -->
+    <div class="empty-state" style="display:none;">
+      <div class="icon">🤍</div>
+      <h3 style="font-weight:700;margin-bottom:8px;">No saved recipes yet</h3>
+      <p>Browse recipes and tap the heart icon to save your favorites here.</p>
+      <a href="recipes.html" class="btn btn-primary" style="margin-top:20px;">Explore Recipes</a>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-bottom" style="border-top:none;padding-top:0;">
+      <span>© 2026 CookTogether.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="nav.js"></script>
+<script>
+  document.querySelectorAll('.chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>

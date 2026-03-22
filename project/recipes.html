@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recipes — CookTogether</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span>🍳</span> CookTogether</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="recipes.html" class="active">Recipes</a>
+      <a href="submit.html">Submit Recipe</a>
+      <a href="login.html" class="btn-nav">Login</a>
+    </div>
+    <button class="hamburger" id="hamburger">☰</button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="recipes.html">Recipes</a>
+    <a href="submit.html">Submit Recipe</a>
+    <a href="login.html">Login</a>
+  </div>
+</nav>
+
+<section class="section">
+  <div class="section-inner">
+
+    <!-- Page Header -->
+    <div style="margin-bottom:28px;">
+      <h1 style="font-size:1.9rem;font-weight:800;margin-bottom:6px;">All Recipes</h1>
+      <p class="text-muted">Discover 12,400+ recipes from our community of home cooks.</p>
+    </div>
+
+    <!-- Filters Bar -->
+    <div class="filters-bar">
+      <div class="filter-group">
+        <label>🔍</label>
+        <input type="text" placeholder="Search recipes…" style="width:200px;" />
+      </div>
+      <div class="filter-group">
+        <label>Category</label>
+        <select>
+          <option>All</option>
+          <option>Breakfast</option>
+          <option>Lunch</option>
+          <option>Dinner</option>
+          <option>Desserts</option>
+          <option>Vegan</option>
+          <option>Drinks</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>Time</label>
+        <select>
+          <option>Any</option>
+          <option>Under 15 min</option>
+          <option>Under 30 min</option>
+          <option>Under 1 hour</option>
+          <option>1+ hours</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>Difficulty</label>
+        <select>
+          <option>Any</option>
+          <option>Easy</option>
+          <option>Medium</option>
+          <option>Hard</option>
+        </select>
+      </div>
+      <div class="filter-group" style="margin-left:auto;">
+        <label>Sort by</label>
+        <select>
+          <option>Most Popular</option>
+          <option>Newest</option>
+          <option>Highest Rated</option>
+          <option>Quickest</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Category Chips -->
+    <div class="filter-chips mb-4" style="margin-bottom:24px;">
+      <span class="chip active">All</span>
+      <span class="chip">🍳 Breakfast</span>
+      <span class="chip">🥗 Lunch</span>
+      <span class="chip">🍝 Dinner</span>
+      <span class="chip">🍰 Desserts</span>
+      <span class="chip">🌱 Vegan</span>
+      <span class="chip">🍜 Asian</span>
+      <span class="chip">🥐 Baking</span>
+    </div>
+
+    <!-- Results count -->
+    <p class="text-muted" style="margin-bottom:20px;font-size:0.88rem;">Showing <strong>12,400</strong> recipes</p>
+
+    <!-- Recipe Grid -->
+    <div class="cards-grid">
+
+      <a href="recipe-detail.html" class="recipe-card">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&q=80" alt="Avocado Toast" />
+          <span class="card-badge">Breakfast</span>
+          <button class="card-save">🤍</button>
+        </div>
+        <div class="card-body">
+          <h3>Creamy Avocado Toast</h3>
+          <div class="card-meta"><span>⏱ 10 min</span><span>👤 Easy</span></div>
+          <div class="card-footer">
+            <div class="rating"><span class="stars">★★★★★</span> 4.9</div>
+            <span class="author">by Shubham</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="recipe-detail.html" class="recipe-card">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&q=80" alt="Pizza" />
+          <span class="card-badge">Dinner</span>
+          <button class="card-save">🤍</button>
+        </div>
+        <div class="card-body">
+          <h3>Homemade Margherita Pizza</h3>
+          <div class="card-meta"><span>⏱ 45 min</span><span>👤 Medium</span></div>
+          <div class="card-footer">
+            <div class="rating"><span class="stars">★★★★★</span> 4.8</div>
+            <span class="author">by Luca R.</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="recipe-detail.html" class="recipe-card">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=400&q=80" alt="Pancakes" />
+          <span class="card-badge">Breakfast</span>
+          <button class="card-save">🤍</button>
+        </div>
+        <div class="card-body">
+          <h3>Fluffy Buttermilk Pancakes</h3>
+          <div class="card-meta"><span>⏱ 20 min</span><span>👤 Easy</span></div>
+          <div class="card-footer">
+            <div class="rating"><span class="stars">★★★★☆</span> 4.7</div>
+            <span class="author">by Sophie T.</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="recipe-detail.html" class="recipe-card">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&q=80" alt="Salad" />
+          <span class="card-badge">Lunch</span>
+          <button class="card-save">🤍</button>
+        </div>
+        <div class="card-body">
+          <h3>Rainbow Veggie Bowl</h3>
+          <div class="card-meta"><span>⏱ 15 min</span><span>👤 Easy</span></div>
+          <div class="card-footer">
+            <div class="rating"><span class="stars">★★★★★</span> 4.9</div>
+            <span class="author">by Priya M.</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="recipe-detail.html" class="recipe-card">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=400&q=80" alt="Pasta" />
+          <span class="card-badge">Dinner</span>
+          <button class="card-save">🤍</button>
+        </div>
+        <div class="card-body">
+          <h3>Creamy Garlic Pasta</h3>
+          <div class="card-meta"><span>⏱ 25 min</span><span>👤 Easy</span></div>
+          <div class="card-footer">
+            <div class="rating"><span class="stars">★★★★★</span> 4.8</div>
+            <span class="author">by James W.</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="recipe-detail.html" class="recipe-card">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=400&q=80" alt="Cake" />
+          <span class="card-badge">Dessert</span>
+          <button class="card-save">🤍</button>
+        </div>
+        <div class="card-body">
+          <h3>Chocolate Lava Cake</h3>
+          <div class="card-meta"><span>⏱ 30 min</span><span>👤 Medium</span></div>
+          <div class="card-footer">
+            <div class="rating"><span class="stars">★★★★★</span> 5.0</div>
+            <span class="author">by Emma L.</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- Pagination -->
+    <div style="display:flex;justify-content:center;gap:8px;margin-top:48px;">
+      <button class="btn btn-outline btn-sm" style="border-radius:50px;">← Prev</button>
+      <button class="btn btn-primary btn-sm">1</button>
+      <button class="btn btn-outline btn-sm">2</button>
+      <button class="btn btn-outline btn-sm">3</button>
+      <button class="btn btn-outline btn-sm">Next →</button>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-bottom" style="border-top:none;padding-top:0;">
+      <span>© 2026 CookTogether. Made with ❤️ for food lovers.</span>
+      <span><a href="about.html" style="color:var(--primary);">About</a> · <a href="index.html" style="color:var(--primary);">Home</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="nav.js"></script>
+<script>
+  document.querySelectorAll('.chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>

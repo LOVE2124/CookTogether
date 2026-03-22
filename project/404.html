@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recipe Not Found — CookTogether</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span>🍳</span> CookTogether</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="recipes.html">Recipes</a>
+      <a href="submit.html">Submit Recipe</a>
+      <a href="login.html" class="btn-nav">Login</a>
+    </div>
+    <button class="hamburger" id="hamburger">☰</button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="recipes.html">Recipes</a>
+    <a href="submit.html">Submit Recipe</a>
+    <a href="login.html">Login</a>
+  </div>
+</nav>
+
+<div class="not-found">
+  <div class="not-found-inner">
+    <div class="not-found-emoji">🍽️</div>
+    <div style="font-size:5rem;font-weight:900;color:var(--border);line-height:1;margin-bottom:16px;">404</div>
+    <h1>Recipe Not Found</h1>
+    <p>Oops! It looks like this recipe has gone missing from the kitchen. It may have been moved, deleted, or never existed in the first place.</p>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+      <a href="index.html" class="btn btn-primary">🏠 Go Home</a>
+      <a href="recipes.html" class="btn btn-outline">🍽️ Browse Recipes</a>
+    </div>
+
+    <!-- Suggestions -->
+    <div style="margin-top:56px;text-align:left;">
+      <h3 style="font-size:1rem;font-weight:700;margin-bottom:20px;text-align:center;color:var(--text-muted);">While you're here, try these popular recipes:</h3>
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        <a href="recipe-detail.html" style="display:flex;gap:14px;align-items:center;background:var(--surface);border-radius:var(--radius-sm);padding:12px;box-shadow:var(--shadow);">
+          <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=80&q=80" alt="Avocado Toast" style="width:52px;height:52px;border-radius:var(--radius-sm);object-fit:cover;" />
+          <div>
+            <p style="font-weight:600;font-size:0.9rem;">Creamy Avocado Toast</p>
+            <p style="font-size:0.78rem;color:var(--text-muted);">⏱ 10 min · ★ 4.9</p>
+          </div>
+        </a>
+        <a href="recipe-detail.html" style="display:flex;gap:14px;align-items:center;background:var(--surface);border-radius:var(--radius-sm);padding:12px;box-shadow:var(--shadow);">
+          <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=80&q=80" alt="Pizza" style="width:52px;height:52px;border-radius:var(--radius-sm);object-fit:cover;" />
+          <div>
+            <p style="font-weight:600;font-size:0.9rem;">Homemade Margherita Pizza</p>
+            <p style="font-size:0.78rem;color:var(--text-muted);">⏱ 45 min · ★ 4.8</p>
+          </div>
+        </a>
+        <a href="recipe-detail.html" style="display:flex;gap:14px;align-items:center;background:var(--surface);border-radius:var(--radius-sm);padding:12px;box-shadow:var(--shadow);">
+          <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=80&q=80" alt="Cake" style="width:52px;height:52px;border-radius:var(--radius-sm);object-fit:cover;" />
+          <div>
+            <p style="font-weight:600;font-size:0.9rem;">Chocolate Lava Cake</p>
+            <p style="font-size:0.78rem;color:var(--text-muted);">⏱ 30 min · ★ 5.0</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile — CookTogether</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span>🍳</span> CookTogether</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="recipes.html">Recipes</a>
+      <a href="submit.html">Submit Recipe</a>
+      <a href="profile.html" class="btn-nav active">My Profile</a>
+    </div>
+    <button class="hamburger" id="hamburger">☰</button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="recipes.html">Recipes</a>
+    <a href="submit.html">Submit Recipe</a>
+    <a href="profile.html">My Profile</a>
+  </div>
+</nav>
+
+<!-- Profile Header -->
+<div class="profile-header">
+  <div class="profile-header-inner">
+    <div class="profile-avatar">👨</div>
+    <div class="profile-info">
+      <h1>Shubham</h1>
+      <p>@shubhamcooks · Joined January 2023 · 📍 Ahmedabad, India</p>
+      <p style="margin-top:6px;font-size:0.88rem;color:var(--text-muted);max-width:400px;">Passionate home cook who loves Indian flavors and quick weeknight meals. 🍛</p>
+      <div class="profile-stats">
+        <div class="stat"><strong>42</strong><span>Recipes</span></div>
+        <div class="stat"><strong>1.2K</strong><span>Saves</span></div>
+        <div class="stat"><strong>318</strong><span>Likes</span></div>
+      </div>
+    </div>
+    <div style="margin-left:auto;">
+      <a href="submit.html" class="btn btn-primary">+ New Recipe</a>
+    </div>
+  </div>
+</div>
+
+<!-- Tabs -->
+<div class="section">
+  <div class="section-inner">
+    <div class="tabs">
+      <div class="tab active" onclick="switchTab('submitted', this)">📝 My Recipes (42)</div>
+      <div class="tab" onclick="switchTab('saved', this)">❤️ Saved (18)</div>
+      <div class="tab" onclick="switchTab('settings', this)">⚙️ Settings</div>
+    </div>
+
+    <!-- Submitted Recipes -->
+    <div id="tab-submitted">
+      <div class="cards-grid">
+        <a href="recipe-detail.html" class="recipe-card">
+          <div class="card-img">
+            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&q=80" alt="Avocado Toast" />
+            <span class="card-badge">Breakfast</span>
+          </div>
+          <div class="card-body">
+            <h3>Creamy Avocado Toast</h3>
+            <div class="card-meta"><span>⏱ 10 min</span><span>👤 Easy</span></div>
+            <div class="card-footer">
+              <div class="rating"><span class="stars">★★★★★</span> 4.9</div>
+              <span class="tag">Published</span>
+            </div>
+          </div>
+        </a>
+        <a href="recipe-detail.html" class="recipe-card">
+          <div class="card-img">
+            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&q=80" alt="Salad" />
+            <span class="card-badge">Lunch</span>
+          </div>
+          <div class="card-body">
+            <h3>Rainbow Veggie Bowl</h3>
+            <div class="card-meta"><span>⏱ 15 min</span><span>👤 Easy</span></div>
+            <div class="card-footer">
+              <div class="rating"><span class="stars">★★★★★</span> 4.9</div>
+              <span class="tag">Published</span>
+            </div>
+          </div>
+        </a>
+        <a href="recipe-detail.html" class="recipe-card">
+          <div class="card-img">
+            <img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=400&q=80" alt="Pasta" />
+            <span class="card-badge">Dinner</span>
+          </div>
+          <div class="card-body">
+            <h3>Creamy Garlic Pasta</h3>
+            <div class="card-meta"><span>⏱ 25 min</span><span>👤 Easy</span></div>
+            <div class="card-footer">
+              <div class="rating"><span class="stars">★★★★★</span> 4.8</div>
+              <span class="tag" style="background:#fef9e7;color:#b7950b;">Draft</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Saved Recipes -->
+    <div id="tab-saved" style="display:none;">
+      <div class="cards-grid">
+        <a href="recipe-detail.html" class="recipe-card">
+          <div class="card-img">
+            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&q=80" alt="Pizza" />
+            <span class="card-badge">Dinner</span>
+            <button class="card-save">❤️</button>
+          </div>
+          <div class="card-body">
+            <h3>Homemade Margherita Pizza</h3>
+            <div class="card-meta"><span>⏱ 45 min</span><span>👤 Medium</span></div>
+            <div class="card-footer">
+              <div class="rating"><span class="stars">★★★★★</span> 4.8</div>
+              <span class="author">by Luca R.</span>
+            </div>
+          </div>
+        </a>
+        <a href="recipe-detail.html" class="recipe-card">
+          <div class="card-img">
+            <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=400&q=80" alt="Cake" />
+            <span class="card-badge">Dessert</span>
+            <button class="card-save">❤️</button>
+          </div>
+          <div class="card-body">
+            <h3>Chocolate Lava Cake</h3>
+            <div class="card-meta"><span>⏱ 30 min</span><span>👤 Medium</span></div>
+            <div class="card-footer">
+              <div class="rating"><span class="stars">★★★★★</span> 5.0</div>
+              <span class="author">by Emma L.</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Settings -->
+    <div id="tab-settings" style="display:none;max-width:560px;">
+      <div class="submit-card">
+        <h3>👤 Profile Information</h3>
+        <div class="form-row">
+          <div class="form-group"><label>First Name</label><input type="text" value="Shubham" /></div>
+          <div class="form-group"><label>Last Name</label><input type="text" value="" /></div>
+        </div>
+        <div class="form-group"><label>Username</label><input type="text" value="@shubhamcooks" /></div>
+        <div class="form-group"><label>Email</label><input type="email" value="shubham@example.com" /></div>
+        <div class="form-group"><label>Bio</label><textarea style="min-height:80px;">Passionate home cook who loves Indian flavors.</textarea></div>
+        <button class="btn btn-primary">Save Changes</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-bottom" style="border-top:none;padding-top:0;">
+      <span>© 2026 CookTogether.</span>
+      <a href="login.html" style="color:var(--text-muted);font-size:0.85rem;">Sign out</a>
+    </div>
+  </div>
+</footer>
+
+<script src="nav.js"></script>
+<script>
+  function switchTab(name, el) {
+    ['submitted','saved','settings'].forEach(t => {
+      document.getElementById('tab-' + t).style.display = 'none';
+    });
+    document.getElementById('tab-' + name).style.display = 'block';
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    el.classList.add('active');
+  }
+</script>
+</body>
+</html>

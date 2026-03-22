@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Creamy Avocado Toast — CookTogether</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span>🍳</span> CookTogether</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="recipes.html" class="active">Recipes</a>
+      <a href="submit.html">Submit Recipe</a>
+      <a href="login.html" class="btn-nav">Login</a>
+    </div>
+    <button class="hamburger" id="hamburger">☰</button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="recipes.html">Recipes</a>
+    <a href="submit.html">Submit Recipe</a>
+    <a href="login.html">Login</a>
+  </div>
+</nav>
+
+<!-- Breadcrumb -->
+<div style="max-width:1100px;margin:0 auto;padding:16px 24px 0;">
+  <p style="font-size:0.85rem;color:var(--text-muted);">
+    <a href="index.html" style="color:var(--primary);">Home</a> ›
+    <a href="recipes.html" style="color:var(--primary);">Recipes</a> ›
+    Creamy Avocado Toast
+  </p>
+</div>
+
+<div class="detail-layout">
+
+  <!-- LEFT COLUMN -->
+  <div>
+    <div class="detail-img">
+      <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&q=80" alt="Creamy Avocado Toast" />
+    </div>
+
+    <div style="margin-top:28px;">
+      <div class="detail-header">
+        <span class="tag">🍳 Breakfast</span>
+        <h1>Creamy Avocado Toast</h1>
+        <div class="detail-meta">
+          <span class="meta-pill">⏱ 10 min</span>
+          <span class="meta-pill">👤 Easy</span>
+          <span class="meta-pill">🍽️ 2 servings</span>
+          <span class="meta-pill">🔥 320 cal</span>
+        </div>
+        <div class="rating" style="margin-bottom:16px;font-size:1rem;">
+          <span class="stars" style="font-size:1.1rem;">★★★★★</span>
+          <strong>4.9</strong>
+          <span class="text-muted" style="font-weight:400;">(248 reviews)</span>
+        </div>
+        <div class="detail-actions">
+          <button class="btn btn-primary" id="saveBtn" onclick="toggleSave()">🤍 Save Recipe</button>
+          <button class="btn btn-outline" onclick="toggleLike()">👍 Like</button>
+          <button class="btn-icon" title="Share">🔗</button>
+          <button class="btn-icon" title="Print">🖨️</button>
+        </div>
+      </div>
+
+      <!-- Ingredients -->
+      <div class="ingredients-card">
+        <h3>🛒 Ingredients</h3>
+        <ul class="ingredients-list">
+          <li>2 slices sourdough bread</li>
+          <li>1 ripe avocado</li>
+          <li>1 tbsp lemon juice</li>
+          <li>Salt and black pepper to taste</li>
+          <li>Red pepper flakes (optional)</li>
+          <li>2 eggs (poached or fried)</li>
+          <li>Fresh microgreens for garnish</li>
+          <li>Extra virgin olive oil drizzle</li>
+        </ul>
+      </div>
+
+      <!-- Instructions -->
+      <div class="instructions-card">
+        <h3>📋 Instructions</h3>
+        <ol class="steps-list">
+          <li>Toast the sourdough bread slices until golden and crispy.</li>
+          <li>Halve the avocado, remove the pit, and scoop the flesh into a bowl.</li>
+          <li>Add lemon juice, salt, and pepper. Mash with a fork to your desired consistency.</li>
+          <li>Spread the avocado mixture generously over each toast slice.</li>
+          <li>Top with a poached or fried egg for extra protein.</li>
+          <li>Garnish with microgreens, red pepper flakes, and a drizzle of olive oil.</li>
+          <li>Serve immediately and enjoy!</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT SIDEBAR -->
+  <div>
+    <!-- Author -->
+    <div class="sidebar-card">
+      <h3>👨‍🍳 Recipe by</h3>
+      <div class="author-card">
+        <div class="avatar">👨</div>
+        <div>
+          <strong>Shubham</strong>
+          <p style="font-size:0.82rem;color:var(--text-muted);">Home cook · 42 recipes · 📍 Ahmedabad, India</p>
+          <a href="profile.html" class="btn btn-outline btn-sm" style="margin-top:8px;">View Profile</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Nutrition -->
+    <div class="sidebar-card">
+      <h3>📊 Nutrition (per serving)</h3>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:4px;">
+        <div style="text-align:center;background:var(--bg);border-radius:var(--radius-sm);padding:12px;">
+          <strong style="font-size:1.2rem;color:var(--primary);">320</strong>
+          <p style="font-size:0.75rem;color:var(--text-muted);">Calories</p>
+        </div>
+        <div style="text-align:center;background:var(--bg);border-radius:var(--radius-sm);padding:12px;">
+          <strong style="font-size:1.2rem;color:var(--primary);">12g</strong>
+          <p style="font-size:0.75rem;color:var(--text-muted);">Protein</p>
+        </div>
+        <div style="text-align:center;background:var(--bg);border-radius:var(--radius-sm);padding:12px;">
+          <strong style="font-size:1.2rem;color:var(--primary);">28g</strong>
+          <p style="font-size:0.75rem;color:var(--text-muted);">Carbs</p>
+        </div>
+        <div style="text-align:center;background:var(--bg);border-radius:var(--radius-sm);padding:12px;">
+          <strong style="font-size:1.2rem;color:var(--primary);">18g</strong>
+          <p style="font-size:0.75rem;color:var(--text-muted);">Fat</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tags -->
+    <div class="sidebar-card">
+      <h3>🏷️ Tags</h3>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:4px;">
+        <span class="chip">Vegetarian</span>
+        <span class="chip">Quick</span>
+        <span class="chip">Healthy</span>
+        <span class="chip">Brunch</span>
+        <span class="chip">Avocado</span>
+      </div>
+    </div>
+
+    <!-- Related -->
+    <div class="sidebar-card">
+      <h3>🍽️ You might also like</h3>
+      <div style="display:flex;flex-direction:column;gap:12px;margin-top:4px;">
+        <a href="recipe-detail.html" style="display:flex;gap:12px;align-items:center;">
+          <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=80&q=80" alt="Pancakes" style="width:56px;height:56px;border-radius:var(--radius-sm);object-fit:cover;" />
+          <div>
+            <p style="font-size:0.88rem;font-weight:600;">Fluffy Pancakes</p>
+            <p style="font-size:0.78rem;color:var(--text-muted);">⏱ 20 min · ★ 4.7</p>
+          </div>
+        </a>
+        <a href="recipe-detail.html" style="display:flex;gap:12px;align-items:center;">
+          <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=80&q=80" alt="Bowl" style="width:56px;height:56px;border-radius:var(--radius-sm);object-fit:cover;" />
+          <div>
+            <p style="font-size:0.88rem;font-weight:600;">Rainbow Veggie Bowl</p>
+            <p style="font-size:0.78rem;color:var(--text-muted);">⏱ 15 min · ★ 4.9</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-bottom" style="border-top:none;padding-top:0;">
+      <span>© 2026 CookTogether.</span>
+      <span><a href="recipes.html" style="color:var(--primary);">← Back to Recipes</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="nav.js"></script>
+<script>
+  let saved = false, liked = false;
+  function toggleSave() {
+    saved = !saved;
+    document.getElementById('saveBtn').textContent = saved ? '❤️ Saved!' : '🤍 Save Recipe';
+  }
+  function toggleLike() {
+    liked = !liked;
+    event.target.textContent = liked ? '👍 Liked!' : '👍 Like';
+  }
+</script>
+</body>
+</html>

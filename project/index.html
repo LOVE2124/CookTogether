@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Community Cookbook</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span>🍳</span> CookTogether</a>
+    <div class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="recipes.html">Recipes</a>
+      <a href="submit.html">Submit Recipe</a>
+      <a href="login.html" class="btn-nav">Login</a>
+    </div>
+    <button class="hamburger" id="hamburger">☰</button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="recipes.html">Recipes</a>
+    <a href="submit.html">Submit Recipe</a>
+    <a href="login.html">Login</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">🌿 Community-Powered Recipes</div>
+    <h1>Cook Together,<br /><span>Share Together</span></h1>
+    <p>Discover thousands of recipes crafted by home cooks around the world. Save your favorites, share your creations.</p>
+    <div class="search-bar">
+      <input type="text" placeholder="Search recipes, ingredients, cuisines…" />
+      <button onclick="window.location='recipes.html'">Search</button>
+    </div>
+    <a href="recipes.html" class="btn btn-primary">🍽️ Explore Recipes</a>
+    <div class="hero-stats">
+      <div class="stat"><strong>12,400+</strong><span>Recipes</span></div>
+      <div class="stat"><strong>8,200+</strong><span>Cooks</span></div>
+      <div class="stat"><strong>95K+</strong><span>Saves</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED RECIPES -->
+<section class="section" style="background:#fff;">
+  <div class="section-inner">
+    <div class="section-header">
+      <h2>✨ <span>Featured</span> Recipes</h2>
+      <a href="recipes.html" class="btn btn-outline btn-sm">View All</a>
+    </div>
+    <div class="cards-grid">
+
+      <a href="recipe-detail.html" class="recipe-card">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&q=80" alt="Avocado Toast" />
+          <span class="card-badge">Breakfast</span>
+          <button class="card-save">🤍</button>
+        </div>
+        <div class="card-body">
+          <h3>Creamy Avocado Toast</h3>
+          <div class="card-meta">
+            <span>⏱ 10 min</span>
+            <span>👤 Easy</span>
+          </div>
+          <div class="card-footer">
+            <div class="rating"><span class="stars">★★★★★</span> 4.9</div>
+            <span class="author">by Shubham</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="recipe-detail.html" class="recipe-card">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&q=80" alt="Pizza" />
+          <span class="card-badge">Dinner</span>
+          <button class="card-save">🤍</button>
+        </div>
+        <div class="card-body">
+          <h3>Homemade Margherita Pizza</h3>
+          <div class="card-meta">
+            <span>⏱ 45 min</span>
+            <span>👤 Medium</span>
+          </div>
+          <div class="card-footer">
+            <div class="rating"><span class="stars">★★★★★</span> 4.8</div>
+            <span class="author">by Luca R.</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="recipe-detail.html" class="recipe-card">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=400&q=80" alt="Pancakes" />
+          <span class="card-badge">Breakfast</span>
+          <button class="card-save">🤍</button>
+        </div>
+        <div class="card-body">
+          <h3>Fluffy Buttermilk Pancakes</h3>
+          <div class="card-meta">
+            <span>⏱ 20 min</span>
+            <span>👤 Easy</span>
+          </div>
+          <div class="card-footer">
+            <div class="rating"><span class="stars">★★★★☆</span> 4.7</div>
+            <span class="author">by Sophie T.</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="recipe-detail.html" class="recipe-card">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&q=80" alt="Salad" />
+          <span class="card-badge">Lunch</span>
+          <button class="card-save">🤍</button>
+        </div>
+        <div class="card-body">
+          <h3>Rainbow Veggie Bowl</h3>
+          <div class="card-meta">
+            <span>⏱ 15 min</span>
+            <span>👤 Easy</span>
+          </div>
+          <div class="card-footer">
+            <div class="rating"><span class="stars">★★★★★</span> 4.9</div>
+            <span class="author">by Priya M.</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+<section class="section">
+  <div class="section-inner">
+    <div class="section-header">
+      <h2>Browse by <span>Category</span></h2>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;">
+      <a href="recipes.html" class="chip active">🍳 Breakfast</a>
+      <a href="recipes.html" class="chip">🥗 Lunch</a>
+      <a href="recipes.html" class="chip">🍝 Dinner</a>
+      <a href="recipes.html" class="chip">🍰 Desserts</a>
+      <a href="recipes.html" class="chip">🥤 Drinks</a>
+      <a href="recipes.html" class="chip">🌱 Vegan</a>
+      <a href="recipes.html" class="chip">🍜 Asian</a>
+      <a href="recipes.html" class="chip">🫕 Soups</a>
+      <a href="recipes.html" class="chip">🥐 Baking</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section style="background:var(--primary);padding:60px 24px;text-align:center;">
+  <h2 style="color:#fff;font-size:1.8rem;font-weight:800;margin-bottom:12px;">Have a recipe to share?</h2>
+  <p style="color:rgba(255,255,255,0.85);margin-bottom:24px;">Join thousands of home cooks and share your culinary creations with the world.</p>
+  <a href="submit.html" class="btn" style="background:#fff;color:var(--primary);">📝 Submit Your Recipe</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">🍳 CookTogether</div>
+        <p>A community-powered cookbook where every recipe tells a story. Cook, share, and inspire.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="recipes.html">All Recipes</a>
+        <a href="recipes.html">Trending</a>
+        <a href="recipes.html">New Arrivals</a>
+      </div>
+      <div class="footer-col">
+        <h4>Community</h4>
+        <a href="about.html">About Us</a>
+        <a href="about.html">Guidelines</a>
+        <a href="submit.html">Submit Recipe</a>
+      </div>
+      <div class="footer-col">
+        <h4>Account</h4>
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+        <a href="profile.html">Profile</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 CookTogether. Made with ❤️ for food lovers.</span>
+      <span>Privacy · Terms · Contact</span>
+    </div>
+  </div>
+</footer>
+
+<script src="nav.js"></script>
+</body>
+</html>
